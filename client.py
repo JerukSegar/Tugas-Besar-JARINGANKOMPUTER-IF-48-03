@@ -74,7 +74,10 @@ def jalankan_klien_udp():
     print(f"Packet Loss: {persentase_hilang:.1f}%")
 
 if __name__ == '__main__':
-    print("Pilih mode:")
+    # Menerima input IP Proxy Server langsung dari CMD saat dijalankan
+    PROXY_HOST = input("Masukkan IP Proxy Server (Device B): ")
+    
+    print("\nPilih mode:")
     print("1. HTTP Client (TCP)")
     print("2. UDP Pinger (Penguji Kualitas Jaringan)")
     pilihan = input("Masukkan pilihan (1/2): ")

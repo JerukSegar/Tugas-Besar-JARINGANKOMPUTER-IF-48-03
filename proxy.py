@@ -91,7 +91,9 @@ def jalankan_proxy_udp():
             break
 
 if __name__ == '__main__':
-    print("Proxy Server sedang berjalan di port 8080...")
+    SERVER_HOST = input("Masukkan IP Web Server (Device A): ")
+    
+    print(f"Proxy Server sedang berjalan di port 8080... (Menghubungi Web Server di {SERVER_HOST})")
     utas_tcp = threading.Thread(target=jalankan_proxy_tcp)
     utas_udp = threading.Thread(target=jalankan_proxy_udp)
     utas_tcp.daemon = True
